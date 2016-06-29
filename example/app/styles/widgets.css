@@ -4,6 +4,7 @@
 .quindarlineplot {
   width: 100%;
   height: 100%;  
+  font-family: "Open Sans", Sans-serif;
 }
 
 .widget-container {
@@ -20,6 +21,7 @@
 }
 
 .lineplotbutton {
+  font-family: "Open Sans", Sans-serif;
   padding: 5px 10px;
   background-color: #8B8C94;  
   color: #FFFF00;
@@ -27,6 +29,7 @@
 }
 
 .listlabel {
+  font-family: "Open Sans", Sans-serif;
   padding: 5px 10px;  
   color: #FF6D00;
   background-color: #464954;
