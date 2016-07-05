@@ -2,7 +2,7 @@
 Line plot directive to display spacecraft vehicle's sensors, temperature, battery, etc.  Idea inspired by angular-flot.
 
 # How to Run 
-1. Running buildme file will set up the environment for quindar-lineplot
+1. Running buildme file in the example folder will set up the environment for quindar-lineplot
 2. Run server.js by node server.js.
 
 # How to Integrate the Stand Alone Version to Quindar
