@@ -105,6 +105,7 @@ angular.module('angular-lineplot',[])
 		  series: {
 		  shadowSize: 0	// Drawing is faster without shadows
 		  },
+		  colors: ['#71ECF9'],
           points: {show: true,
 		           radius: 2,
                    lineWidth: 1,
@@ -121,17 +122,16 @@ angular.module('angular-lineplot',[])
 		  }],
 		  yaxis: {
 		    show: true,
-		    font:{family:"Open Sans", color:"#242833"},
+		    font:{family:"Open Sans", color:"#B8F6FC"},
 		    tickColor: "#464954",	
             axisLabelPadding:35,			
 		  },
 		  xaxis: {
 		    show: true,
 			mode: "time",
-			tickSize:[2,"second"],
 			//axisLabelUseCanvas: true,
 			axisLabelPadding: 15,			
-		    font:{family:"Open Sans", color:"#242833"},
+		    font:{family:"Open Sans", color:"#B8F6FC"},
 		    tickColor: "#464954",
 		  },
 		  grid: {
