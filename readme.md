@@ -25,6 +25,10 @@ node server.js
 ```
 
 Open a Web browser with the URL http://localhost:3000. You should see a Web page with a line plot graph.
+You can click "Stream" to start streaming satellite telemetry data at real time.
+If you can click "Load" and then "Plot", you can render historic satellite telemtry data.
+
+From the top left corner, you can select the satellite spacecraft (e.g. Audacy1, Audacy2) and the telemetry data types (e.g. x, y, z are position telemetry data points).
 
 ## How to Integrate with Quindar
 Quindar (https://github.com/audacyDevOps/quindar-angular) is a real-time mission operations application produced by Audacy. You can add this widget in grid-like window of Quindar as per the following steps:
