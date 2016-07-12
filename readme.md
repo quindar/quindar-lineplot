@@ -1,7 +1,7 @@
 # quindar-lineplot
 Updated: Jul 12, 2016 by Masaki Kakoi
 
-## SUmmary
+## Summary
 Line plot directive to display spacecraft vehicle's sensors, temperature, battery, etc.  Idea inspired by angular-flot.
 
 ## Dependencies
