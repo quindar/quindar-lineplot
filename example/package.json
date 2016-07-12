@@ -5,11 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.14.0",
-<<<<<<< HEAD
 	"nodemon": "^1.9.2",
-=======
-    "nodemon": "^1.9.2",
->>>>>>> 270c3337641038575fb847e6f56e126fec2e3d68
     "socket.io": "^1.4.6"
   },
   "devDependencies": {},
