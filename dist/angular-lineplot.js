@@ -49,8 +49,9 @@ angular.module('angular-lineplot',[])
 		datatype: '=',
 	  },
 	  link: function(scope,element,attributes){
-		  
-	    var socket = io('ws://platform.audacy.space:7904');
+		
+		var setPlatform='ws://'+platform+':'+port;		
+	    var socket = io(setPlatform);
       
 	    socket.on('connected', function(data) {
 	      alert("hi")

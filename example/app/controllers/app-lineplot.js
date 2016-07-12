@@ -14,7 +14,7 @@ app.controller('lineplotCtr',['$scope', function($scope) {
 	var d_type = document.getElementById('data').value;//$scope.datatype;
     var num_data = $scope.numdata;
     var sc = document.getElementById('sc').value;//$scope.sc;  
-    var x = 'http://platform.audacy.space:7902/services/v1/position/'+sc+'/'+num_data;
+    var x = 'http://'+platform+':'+dbPort+'/services/v1/position/'+sc+'/'+num_data;
     	
 	$.ajax({
         url: x
