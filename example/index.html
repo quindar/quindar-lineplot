@@ -1,39 +1,32 @@
-<!--
-// Program: angular-lineplot.js
-// Purpose: AngularJS line plot
-// Author: Masaki Kakoi
-// Updated: June 23, 2016
-// License: MIT license
--->
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
-    <meta charset="utf-8">
-    <title>angular-lineplot example</title>	
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>angular-lineplot example</title>	
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" href="app/styles/widgets.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
 
-    <div class="quindarlineplot" ng-controller="lineplotCtr"> 
-	  <lineplot get-position="getPosition()" sc="sc" numdata="numdata" datatype="datatype"></lineplot>
-    </div>
-
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" href="app/styles/widgets.css" />
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<body>
+  <div class="quindarlineplot" ng-controller="lineplotCtr"> 
+    <lineplot get-position="getPosition()" sc="sc" numdata="numdata" datatype="datatype"></lineplot>
+  </div>
 	
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>  
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>  
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="app/js/jquery.flot.resize.js"></script>
-    <script src="app/js/jquery.flot.axislabels.js"></script>
-    <script src="app/js/jquery.flot.navigate.js"></script>
-    <script src="app/js/jquery.flot.selection.js"></script>
-    <script src="app/js/jquery.flot.time.js"></script>
+  <script src="app/js/jquery.flot.resize.js"></script>
+  <script src="app/js/jquery.flot.axislabels.js"></script>
+  <script src="app/js/jquery.flot.navigate.js"></script>
+  <script src="app/js/jquery.flot.selection.js"></script>
+  <script src="app/js/jquery.flot.time.js"></script>
 	
-	<script src="dist/angular-lineplot.js"></script>
-	<script src="app/controllers/app-lineplot.js"></script>
-  </body>
+  <script src="dist/angular-lineplot.js"></script>
+  <script src="app/controllers/app-lineplot.js"></script>
+  <script src="config/clientSettings.js"></script>
+</body>
 </html>
