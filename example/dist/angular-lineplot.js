@@ -201,7 +201,7 @@ angular.module('angular-lineplot',[])
 		  plot.setData([{
 		    data: data_plot,
 		  }]);
-		  plot.getAxes().yaxis.options.axisLabel = scope.datatype;	
+		  plot.getAxes().yaxis.options.axisLabel = scope.data.dataType;	
           plot.draw();	         	  
 	    }
 
@@ -210,7 +210,7 @@ angular.module('angular-lineplot',[])
 		  socket.emit('telemetry', {"type": 'position'});
 		  
 		  // x is name of the selected data		
-	      var x = scope.datatype;
+	      var x = scope.data.dataType;
 		  // type of spacecraft
 		  var sc = scope.sc;
 
@@ -266,29 +266,34 @@ angular.module('angular-lineplot',[])
 		
 	    function updateStream() {
           socket.emit('telemetry', {"type": 'position'});
-		  
+
 		  var data = scope.dataStream;  
 		  
-          data_x = data[0];
-		  data_y = data[1];
-		  data_plot2.push([data_x*1000, data_y]);			
+		  if (data[0] == null){
+			  alert("No Data Available!")
+			  clearTimeout(timer);
+		  }else{
+            data_x = data[0];
+		    data_y = data[1];
+		    data_plot2.push([data_x*1000, data_y]);			
 		  
-		  if (data_plot2.length > ptNum) {
-		    data_plot2.splice(0,1);
-		  }
+		    if (data_plot2.length > ptNum) {
+		      data_plot2.splice(0,1);
+		    };
 		  
-		  plot.setData([{
-		    data:data_plot2,	
-  		  }]);
+		    plot.setData([{
+		      data:data_plot2,	
+  		    }]);
 		
-		  // Since the axes don't change, we don't need to call plot.setupGrid()
-		  plot.draw();
-		  plot.getAxes().yaxis.options.axisLabel = scope.data.dataType;
+		    // Since the axes don't change, we don't need to call plot.setupGrid()
+		    plot.draw();
+		    plot.getAxes().yaxis.options.axisLabel = scope.data.dataType;
 		  
-		  timer = setTimeout(updateStream, delay);
+		    timer = setTimeout(updateStream, delay);
 		  
-		  return this;
-		}
+		    return this;
+		  };
+		};
 		
 	    function updateAxes(xLowLim,xUpLim,yLowLim,yUpLim){
 	    
