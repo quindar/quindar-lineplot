@@ -8,12 +8,23 @@ var app = angular.module('app',['angular-lineplot']);
 
 app.controller('lineplotCtr',['$scope', function($scope) {
   
+  $scope.data = {
+    sc: "Audacy1",
+    dataType: "x",	
+	dataStream: [],
+  };
+  
+  $scope.btns = [{state: false,
+                  label: "PAN"}];
+		
+  $scope.pauseResume = "PAUSE";
+		
   $scope.getPosition = function (){
 	   
 	var output=[]; 
-	var d_type = document.getElementById('data').value;//$scope.datatype;
+	var d_type = $scope.data.dataType;//$scope.datatype;
     var num_data = $scope.numdata;
-    var sc = document.getElementById('sc').value;//$scope.sc;  
+    var sc = $scope.data.sc;//$scope.sc;  
     var x = 'http://'+platform+':'+dbPort+'/services/v1/position/'+sc+'/'+num_data;
     	
 	$.ajax({
@@ -38,7 +49,6 @@ app.controller('lineplotCtr',['$scope', function($scope) {
 	   };
        
        $("#dataPlot").text(output);
-	   //alert(output)
     });
 	
 
