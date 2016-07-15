@@ -5,13 +5,24 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.14.0",
-	"nodemon": "^1.9.2",
+    "napa": "^2.3.0",
+    "nodemon": "^1.9.2",
     "socket.io": "^1.4.6"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "inatall": "napa"
+  },
+  "napa": {
+    "googleOpenSans": "htpp://fonts.googleapis.com/css?family=Open+Sans",
+    "bootstrap-css": "htpp://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+    "angular-min": "http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js",
+    "jquery-min": "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js",
+    "jquer-flot": "http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js",
+    "socket.io": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js",
+    "bootstrap-js": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
   },
   "author": "Masaki Kakoi",
   "license": "MIT"

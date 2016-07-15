@@ -3,9 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>angular-lineplot example</title>	
+  <!-- replace googleapis font by minified version below 
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  -->
+
+  <!-- build:css dist/groundtrack-thirdparty.css -->
+  <link rel="stylesheet" type="text/css" href="dist/lineplot-thirdparty.css" />
+
+  <!-- custom CSS for lineplot -->
   <link rel="stylesheet" href="app/styles/widgets.css" />
+
+  <!-- replaced by minified version 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  -->
 </head>
 
 <body>
@@ -13,12 +23,18 @@
     <lineplot get-position="getPosition()" sc="sc" numdata="numdata" datatype="datatype"></lineplot>
   </div>
 	
+  <!-- replaced by minified version below 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>  
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  -->
 
+  <!-- build:js dist/groundtrack-thirdparty.js -->
+  <script src="dist/lineplot-thirdparty.js"></script>
+
+  <!-- custom JS for lineplot -->
   <script src="app/js/jquery.flot.resize.js"></script>
   <script src="app/js/jquery.flot.axislabels.js"></script>
   <script src="app/js/jquery.flot.navigate.js"></script>
