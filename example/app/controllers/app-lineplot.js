@@ -30,25 +30,29 @@ app.controller('lineplotCtr',['$scope', function($scope) {
 	$.ajax({
         url: x
     }).then(function(data) {
-	   switch(d_type){
-		 case "x":
-		   for(i=0; i < num_data; i++){
-		     output.push([data.data[i].timestamp, data.data[i].x]);				 
-		   };
-		   break;
-		 case "y": 
-		   for(i=0; i < num_data; i++){
-		     output.push([data.data[i].timestamp, data.data[i].y]);			 
-		   };
-		   break;
-		 case "z": 
-		   for(i=0; i < num_data; i++){
-		     output.push([data.data[i].timestamp, data.data[i].z]);			 
-		   };
-	       break;	   
-	   };
+	   if (data.data[0] == null){
+	   alert("No Data Available!")
+	   }else{
+	     switch(d_type){
+		   case "x":
+		     for(i=0; i < num_data; i++){
+		       output.push([data.data[i].timestamp, data.data[i].x]);				 
+		     };
+		     break;
+		   case "y": 
+		     for(i=0; i < num_data; i++){
+		       output.push([data.data[i].timestamp, data.data[i].y]);			 
+		     };
+		     break;
+		   case "z": 
+		     for(i=0; i < num_data; i++){
+		       output.push([data.data[i].timestamp, data.data[i].z]);			 
+		     };
+	         break;	   
+	     };
        
-       $("#dataPlot").text(output);
+         $("#dataPlot").text(output);
+	   };
     });
 	
 
