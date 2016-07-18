@@ -46,7 +46,6 @@ angular.module('angular-lineplot',[])
 		data: '&',
 		btns: '&',
 		pauseResume: '&',
-		dataStream: '&',
 	  },
 	  controller: 'lineplotCtr',
 	  link: function(scope,element,attributes){
@@ -80,7 +79,7 @@ angular.module('angular-lineplot',[])
 		    };
 		    data_temp=[data_x,data_y];
 		    
-	        scope.dataStream = data_temp;
+	        scope.data.dataStream = data_temp;
 		  };
 	    });
 		
@@ -267,7 +266,7 @@ angular.module('angular-lineplot',[])
 	    function updateStream() {
           socket.emit('telemetry', {"type": 'position'});
 
-		  var data = scope.dataStream;  
+		  var data = scope.data.dataStream;  
 		  
 		  if (data[0] == null){
 			  alert("No Data Available!")
