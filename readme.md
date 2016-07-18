@@ -120,7 +120,7 @@ $scope.dashboards = [
     ];
 ```
 
-This will enable Quindar widget to render lineplot widget on page 4, by specifying the directive name "lineplot". 
+This will enable Quindar widget to render lineplot widget on page 1, by specifying the directive name "lineplot". 
 
 * Add the controller quindarWidgetsControllers.js to include angular-lineplot JavaScript files. Here is an example of the changes:
   - Copy the lineplot controller file (e.g. app-lineplot.js) to the folder /app/controllers.
