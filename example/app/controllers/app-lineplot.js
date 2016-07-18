@@ -33,6 +33,9 @@ app.controller('lineplotCtr',['$scope', function($scope) {
 	   if (data.data[0] == null){
 	   alert("No Data Available!")
 	   }else{
+		 if (num_data > data.data.length) {
+		   num_data = data.data.length;	// replace num_data if not enough data points
+		 }
 	     switch(d_type){
 		   case "x":
 		     for(i=0; i < num_data; i++){
@@ -54,9 +57,5 @@ app.controller('lineplotCtr',['$scope', function($scope) {
          $("#dataPlot").text(output);
 	   };
     });
-	
-
   };
-	
-	
 }]);
