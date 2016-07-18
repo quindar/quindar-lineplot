@@ -122,9 +122,10 @@ $scope.dashboards = [
 
 This will enable Quindar widget to render lineplot widget on page 4, by specifying the directive name "lineplot". 
 
-* Add the controller 'lineplotCtr' to angular-lineplot.js. Here is an example of the changes:
-  - var app = angular.module('app')
-  - Add 'app' as a dependency to angular-lineplot.js.
+* Add the controller quindarWidgetsControllers.js to include angular-lineplot JavaScript files. Here is an example of the changes:
+  - Copy the lineplot controller file (e.g. app-lineplot.js) to the folder /app/controllers.
+  - Modify the data source (e.g. server endpoint URL) in the app-lineplot.js as appropriate.
+  - Modify quindarWidgetsControllers.js to add lineplot directive to the angular.module, e.g. var app = angular.module("app", ['gridster', 'ui.bootstrap', 'ui.router','angular-groundtrack','d3','angular-lineplot']);
   - Comment out scopes from angular-lineplot.js wherever appropriate.
 
 * Update the JavaScript and CSS stylesheet in the file index.html
