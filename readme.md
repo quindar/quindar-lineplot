@@ -11,7 +11,7 @@ The angular-lineplot.js is an AngularJS directive that plots simple line graphs 
 * Stream real-time data graph for spacecraft sensors or telemetry information via WebSocket
 * Integrated with MongoDB database or any database via REST API
 
-## Dependencies
+## Pre-requisites
 * You need to install NodeJS on your target host (e.g. laptop, Linux host) first.
 Using NodeJS's Node Package Manager, you can install this ground track widget. 
 
