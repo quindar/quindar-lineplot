@@ -96,7 +96,7 @@ Quindar is a real-time mission operations application produced by Audacy. You ca
     ];
 ```
 
-  - Add your new widget in a page definition (e.g. page 1 with id=0) in the $scope.dashboards array, e.g.
+6. Add your new widget in a page definition (e.g. page 1 with id=0) in the $scope.dashboards array, e.g.
 ```
 $scope.dashboards = [
       {
