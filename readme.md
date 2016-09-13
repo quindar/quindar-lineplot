@@ -72,9 +72,9 @@ Quindar is a real-time mission operations application produced by Audacy. You ca
 * Copy the file quindar-lineplot.js from quindar-lineplot project to quindar-angular project
   - From quindar-lineplot project folder "/dist" (https://github.com/quindar/quindar-lineplot/tree/master/dist) 
   - To the quindar-angular project folder "/app/directives".
-* Copy the file factory-lineplot.js from quindar-lineplot project to quindar-angular project.
-  - From quindar-lineplot project folder "/example/app/factories" (https://github.com/quindar/quindar-lineplot/tree/master/example/app/factories)
-  - To quindar-angular project folder "/app/factories"
+* Copy the file app-lineplot.js from quindar-lineplot project to quindar-angular project.
+  - From quindar-lineplot project folder "/example/app/controllers" (https://github.com/quindar/quindar-lineplot/tree/master/example/app/controllers)
+  - To quindar-angular project folder "/app/controllers"
 * Edit the quindarWidgetsControllers.js (controller) to add the new widget quindar-lineplot:
   - Add your widget definition in the $scope.widgetDefinitions:
 ```
