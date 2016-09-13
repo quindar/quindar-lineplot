@@ -23,7 +23,7 @@ You can refer to the installation instructions under https://nodejs.org/en/downl
 
 * You need to create a local copy of this project. For example,
 ```
-git clone https://github.com/audacyDevOps/quindar-lineplot.git
+git clone https://github.com/quindar/quindar-lineplot.git
 ``` 
 
 ## Dependencies
@@ -67,13 +67,13 @@ From the top left corner, you can select the satellite spacecraft (e.g. Audacy1,
 Quindar is a real-time mission operations application produced by Audacy. You can add this lineplot directive to grid-like window in Quindar as per the following steps:
 	
 * Create a copy of Quindar-angular on your target host 
-  - e.g. git clone https://github.com/audacyDevOps/quindar-angular.git)
+  - e.g. git clone https://github.com/quindar/quindar-angular.git)
 * Create a copy of Quindar-lineplot on your target host under a separate folder.
 * Copy the file quindar-lineplot.js from quindar-lineplot project to quindar-angular project
-  - From quindar-lineplot project folder "/dist" (https://github.com/audacyDevOps/quindar-lineplot/tree/master/dist) 
+  - From quindar-lineplot project folder "/dist" (https://github.com/quindar/quindar-lineplot/tree/master/dist) 
   - To the quindar-angular project folder "/app/directives".
 * Copy the file factory-lineplot.js from quindar-lineplot project to quindar-angular project.
-  - From quindar-lineplot project folder "/example/app/factories" (https://github.com/audacyDevOps/quindar-lineplot/tree/master/example/app/factories)
+  - From quindar-lineplot project folder "/example/app/factories" (https://github.com/quindar/quindar-lineplot/tree/master/example/app/factories)
   - To quindar-angular project folder "/app/factories"
 * Edit the quindarWidgetsControllers.js (controller) to add the new widget quindar-lineplot:
   - Add your widget definition in the $scope.widgetDefinitions:
@@ -131,7 +131,7 @@ This will enable Quindar widget to render lineplot widget on page 1, by specifyi
 * Update the JavaScript and CSS stylesheet in the file index.html
   - Your new AngularJS directive probably requires new JS/CSS files. You may want to review the current index.html
 to see if the versions are compatible.
-  - quindar-lineplot requires angular-flot third party JS/CSS. They are consolidated and concatenated in the files "lineplot-thirdparty.js" and "lineplot-thirdparty.css" for convenience. Refer to https://github.com/audacyDevOps/quindar-lineplot/tree/master/example/dist for details.
+  - quindar-lineplot requires angular-flot third party JS/CSS. They are consolidated and concatenated in the files "lineplot-thirdparty.js" and "lineplot-thirdparty.css" for convenience. Refer to https://github.com/quindar/quindar-lineplot/tree/master/example/dist for details.
   - You can refer to the /example/index.html as an example.
   - e.g. for quindar-lineplot project, you will need to add the following files:
 ```
