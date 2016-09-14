@@ -127,6 +127,7 @@ This will enable Quindar widget to render lineplot widget on page 1, by specifyi
   - Modify the data source (e.g. server endpoint URL) in the app-lineplot.js as appropriate.
   - Modify quindarWidgetsControllers.js to add lineplot directive to the angular.module, e.g. var app = angular.module("app", ['gridster', 'ui.bootstrap', 'ui.router','angular-groundtrack','d3','angular-lineplot']);
   - Comment out scopes from angular-lineplot.js wherever appropriate.
+  - Remove a dependency from app-lineplot.js, e.g. var app = angular.module('app')
 
 * Update the JavaScript and CSS stylesheet in the file index.html
   - Your new AngularJS directive probably requires new JS/CSS files. You may want to review the current index.html
