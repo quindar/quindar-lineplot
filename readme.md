@@ -1,4 +1,4 @@
-# quindar-lineplot
+# qwidget-lineplot
 Updated: Jul 18, 2016 by Ray Lai, Masaki Kakoi
 
 ## Summary
@@ -23,14 +23,14 @@ You can refer to the installation instructions under https://nodejs.org/en/downl
 
 * You need to create a local copy of this project. For example,
 ```
-git clone https://github.com/quindar/quindar-lineplot.git
+git clone https://github.com/quindar/qwidget-lineplot.git
 ``` 
 
 ## Dependencies
 * AngularJS
 * Flot (charts library)
 
-Once you download the quindar-lineplot project, you need to run buildme.sh in the example folder to install required module. Refer to the "How to Run the Demo" section for details. 	
+Once you download the qwidget-lineplot project, you need to run buildme.sh in the example folder to install required module. Refer to the "How to Run the Demo" section for details. 	
 	
 ## How to Run the Demo
 * After creating a local copy of this project, run the script "buildme.sh" to install NodeJS dependencies and libraries:
@@ -66,16 +66,16 @@ From the top left corner, you can select the satellite spacecraft (e.g. Audacy1,
 ## How to Integrate with Quindar
 Quindar is a real-time mission operations application produced by Audacy. You can add this lineplot directive to grid-like window in Quindar as per the following steps:
 	
-* Create a copy of Quindar-angular on your target host 
-  - e.g. git clone https://github.com/quindar/quindar-angular.git)
-* Create a copy of Quindar-lineplot on your target host under a separate folder.
-* Copy the file quindar-lineplot.js from quindar-lineplot project to quindar-angular project
-  - From quindar-lineplot project folder "/dist" (https://github.com/quindar/quindar-lineplot/tree/master/dist) 
-  - To the quindar-angular project folder "/app/directives".
-* Copy the file app-lineplot.js from quindar-lineplot project to quindar-angular project.
-  - From quindar-lineplot project folder "/example/app/controllers" (https://github.com/quindar/quindar-lineplot/tree/master/example/app/controllers)
-  - To quindar-angular project folder "/app/controllers"
-* Edit the quindarWidgetsControllers.js (controller) to add the new widget quindar-lineplot:
+* Create a copy of quindar-ux-angular on your target host 
+  - e.g. git clone https://github.com/quindar/quindar-ux-angular.git)
+* Create a copy of qwidget-lineplot on your target host under a separate folder.
+* Copy the file quindar-lineplot.js from qwidget-lineplot project to quindar-ux-angular project
+  - From qwidget-lineplot project folder "/dist" (https://github.com/quindar/qwidget-lineplot/tree/master/dist) 
+  - To the quindar-ux-angular project folder "/app/directives".
+* Copy the file app-lineplot.js from qwidget-lineplot project to quindar-ux-angular project.
+  - From qwidget-lineplot project folder "/example/app/controllers" (https://github.com/quindar/qwidget-lineplot/tree/master/example/app/controllers)
+  - To quindar-ux-angular project folder "/app/controllers"
+* Edit the quindarWidgetsControllers.js (controller) to add the new widget qwidget-lineplot:
   - Add your widget definition in the $scope.widgetDefinitions:
 ```
    var widgetDefinitions = [
@@ -132,9 +132,9 @@ This will enable Quindar widget to render lineplot widget on page 1, by specifyi
 * Update the JavaScript and CSS stylesheet in the file index.html
   - Your new AngularJS directive probably requires new JS/CSS files. You may want to review the current index.html
 to see if the versions are compatible.
-  - quindar-lineplot requires angular-flot third party JS/CSS. They are consolidated and concatenated in the files "lineplot-thirdparty.js" and "lineplot-thirdparty.css" for convenience. Refer to https://github.com/quindar/quindar-lineplot/tree/master/example/dist for details.
+  - qwidget-lineplot requires angular-flot third party JS/CSS. They are consolidated and concatenated in the files "lineplot-thirdparty.js" and "lineplot-thirdparty.css" for convenience. Refer to https://github.com/quindar/qwidget-lineplot/tree/master/example/dist for details.
   - You can refer to the /example/index.html as an example.
-  - e.g. for quindar-lineplot project, you will need to add the following files:
+  - e.g. for qwidget-lineplot project, you will need to add the following files:
 ```
 <!-- custom JS for lineplot -->
   <script src="app/js/jquery.flot.resize.js"></script>
@@ -148,8 +148,8 @@ to see if the versions are compatible.
   <script src="config/clientSettings.js"></script>
 ```
 
-* You can manually re-test your new quindar-angular mission operations application to verify if the application works as expected.
-  - There will be some automated widget test scripts in the quindar-angular project.
+* You can manually re-test your new quindar-ux-angular mission operations application to verify if the application works as expected.
+  - There will be some automated widget test scripts in the quindar-ux-angular project.
   - You can run "nodemon server.js" and open a Web browser with the URL http://localhost:3000 to test the changes.
 
 # Known Constraints
